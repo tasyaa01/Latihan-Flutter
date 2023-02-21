@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'column.dart';
 
+// import 'column_widget.dart';
+// import 'row_widget.dart';
+import 'container_widget.dart';
+import 'latihan.dart';
 
 
 void main() {
@@ -24,7 +27,17 @@ class MyApp extends StatelessWidget {
           // TEXT DI HEADER
           title: Text("Latihan"),
         ),
-        body: ColumnWidget(),
+        body: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            // RowWidget(),
+            // memberikan jarak antara RowWidget row dan ColumnWidget
+            Padding(padding: EdgeInsets.only(top: 30)),
+            // ContainerWidget(),
+            // ColumnWidget(),
+            Latihan(),
+          ],
+        ),
         // LATAR BODY 
         backgroundColor: Colors.grey,
       ),
